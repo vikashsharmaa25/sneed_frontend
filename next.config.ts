@@ -1,9 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    optimizeCss: false, // Disable LightningCSS
-    turbopack: false, // Disable Turbopack (forces Webpack)
-  },
   images: {
     remotePatterns: [
       {
