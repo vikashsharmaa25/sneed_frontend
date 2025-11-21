@@ -1,25 +1,22 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   experimental: {
-    optimizeCss: false, // disable LightningCSS
+    optimizeCss: false, // Disable LightningCSS
+    turbopack: false, // Disable Turbopack (forces Webpack)
   },
   images: {
     remotePatterns: [
       {
         protocol: "https",
         hostname: "images.unsplash.com",
-        port: "",
-        pathname: "/**",
       },
       {
         protocol: "http",
         hostname: "localhost",
         port: "3000",
-        pathname: "/**",
       },
     ],
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
